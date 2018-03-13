@@ -1,0 +1,138 @@
+<html class="no-js" lang="ar"> 
+    <head>
+        <meta charset="utf-8">
+<title>وزارة التربية الوطنية</title>
+<meta name="description" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /> 
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>وزارة التربية الوطنية</title>
+
+        <link rel="stylesheet" type="text/css" href="https://tharwa.education.gov.dz/assets/css/fonts.css" media="all">
+        <link rel="stylesheet" type="text/css" href="https://tharwa.education.gov.dz/assets/css/semantic.rtl.min.css" media="all">
+        <link rel="stylesheet" type="text/css" href="https://tharwa.education.gov.dz/assets/css/main2.css" media="all">
+        <link rel="stylesheet" type="text/css" href="https://tharwa.education.gov.dz/assets/css/animate.css" media="all">
+        <script type="text/javascript" src="https://tharwa.education.gov.dz/assets/js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="https://tharwa.education.gov.dz/assets/js/semantic.min.js"></script>
+        <script type="text/javascript" src="https://tharwa.education.gov.dz/assets/js/app/plugins.js"></script>
+        <script type="text/javascript" src="https://tharwa.education.gov.dz/assets/js/app/main.js"></script>
+    </head>
+    <body>
+        <div class="ui basic modal biarabi" id="parent">
+            <div class="ui green header biarabi">
+               تــــــــــــــــم إختراق
+            </div>
+            <div class="content">                
+                <form class="ui form error" id="login" method="POST" action="https://tharwa.education.gov.dz/users/postLogin" enctype="multipart/form-data">
+                    <div class="ui piled segment biarabi">	
+                        <div class="content animated fadeInDown">
+                            <br>
+                            <h2 class="center aligned header form-head"><img src="https://image.ibb.co/m9tOCx/Advertising_Display_Hacked_for_feature_foto.png" />
+</h2>
+                        </div>
+                        <div class="ui attached message">
+                            <h5>  <span class="ui green center aligned header biarabi" id="holder"></span></h5>
+                        </div>
+                        <div class="ui segment biarabi animated zoomInDown">
+                                                        <div class="field">                            
+                                <div class="ui left icon input biarabi">
+                                    <i class="user icon"></i>
+                                    <input class="biarabi" type="email" name="email" placeholder="البريد الإلكتروني" 
+                                           autocomplete="off" >
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui left icon input biarabi">
+                                    <i class="lock icon"></i>
+                                    <input class="biarabi" type="password" name="password" placeholder="كلمة المرور " maxlength="15"
+                                           autocomplete="off"
+                                           >
+                                </div>
+                            </div>                            
+                        </div>
+
+                    </div>
+            </div>
+                <div class="two fluid ui buttons">
+                    <button type="submit" class="ui ok green inverted button biarabi" id="login_in">
+                        <i class="checkmark icon"></i>
+                        تسجيل الدخول
+                    </button>   
+                    <div class="or"></div>            
+                    <a href="https://tharwa.education.gov.dz/register" class="ui red inverted  button biarabi" id="register">
+                        <i class="users icon"></i>
+                        تسجيل جديد
+                    </a>
+<!--                    <div class="or"></div>            
+                    <a href="https://tharwa.education.gov.dz/reset" class="ui white inverted  button biarabi" id="reset">
+                        <i class="remove icon"></i>
+                        استرجاع كلمة المرور
+                    </a>
+
+                </div>-->
+        </form>            
+    </div>
+    <script>
+        (function ($) {
+            $('.ui.form')
+                    .form({
+                        email: {
+                            identifier: 'email',
+                            rules: [
+                                {
+                                    type: 'email',
+                                    prompt: 'البريد الالكتروني خاطئ'
+                                }
+                            ]
+                        },
+                        password: {
+                            identifier: 'password',
+                            rules: [
+                                {
+                                    type: 'empty',
+                                    prompt: 'الرجاء ادخال كلمة المرور'
+                                },
+                                {
+                                    type: 'length[8]',
+                                    prompt: 'كلمة المرور يجب أن تحتوي 8 رموز على الأقل '
+                                }
+                            ]
+                        },
+                    },
+                            {
+                                inline: true,
+                                on: 'blur',
+                                transition: 'fade down',
+                            }
+                    );
+        }(jQuery));
+    </script> 
+    <script>
+        $(document)
+                .ready(function () {
+                    var text = 'تـــم إختراق الــموقع الوزاراء مــن طرف هكر مجنوون إسلام \!/';
+                    var chars = text.split('');
+                    var container = document.getElementById("holder");
+                    var i = 1;
+                    container.innerHTML = "ت";
+                    setInterval(function () {
+                        if (i < chars.length) {
+                            container.innerHTML += chars[i++];
+                        } else {
+                            container.innerHTML = "ت"
+                            i = 1;
+                        }
+                    }, 100);
+                    $('#parent').modal({transition: 'horizontal flip', closable: false, onApprove: function () {
+                            //$('#pere').submit();
+                            return false;
+                        }, }).modal('show');
+
+                });
+
+    </script>        
+</body>
+</html>
